@@ -3,7 +3,27 @@
 import { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
 
-const PromptCardList = ({ data, handleTagClick }) => {
+// Define types for the prompt and props
+interface Creator {
+  _id: string;
+  username: string;
+  email: string;
+  image: string;
+}
+
+interface Post {
+  _id: string;
+  creator: Creator;
+  prompt: string;
+  tag: string;
+}
+
+interface PromptCardListProps {
+  data: Post[];
+  handleTagClick: (tagName: string) => void;
+}
+
+const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
   return (
     <div className='mt-16 prompt_layout'>
       {data.map((post) => (
@@ -18,26 +38,27 @@ const PromptCardList = ({ data, handleTagClick }) => {
 };
 
 const Feed = () => {
-  const [allPosts, setAllPosts] = useState([]);
-
-  // Search states
-  const [searchText, setSearchText] = useState("");
-  const [searchTimeout, setSearchTimeout] = useState(null);
-  const [searchedResults, setSearchedResults] = useState([]);
+  const [allPosts, setAllPosts] = useState<Post[]>([]);
+  const [searchText, setSearchText] = useState<string>("");
+  const [searchTimeout, setSearchTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [searchedResults, setSearchedResults] = useState<Post[]>([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/prompt");
-    const data = await response.json();
-
-    setAllPosts(data);
+    try {
+      const response = await fetch("/api/prompt");
+      const data: Post[] = await response.json();
+      setAllPosts(data);
+    } catch (error) {
+      console.error("Error fetching posts:", error);
+    }
   };
 
   useEffect(() => {
     fetchPosts();
   }, []);
 
-  const filterPrompts = (searchtext) => {
-    const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
+  const filterPrompts = (searchText: string) => {
+    const regex = new RegExp(searchText, "i");
     return allPosts.filter(
       (item) =>
         regex.test(item.creator.username) ||
@@ -46,11 +67,12 @@ const Feed = () => {
     );
   };
 
-  const handleSearchChange = (e) => {
-    clearTimeout(searchTimeout);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (searchTimeout) {
+      clearTimeout(searchTimeout);
+    }
     setSearchText(e.target.value);
 
-    // debounce method
     setSearchTimeout(
       setTimeout(() => {
         const searchResult = filterPrompts(e.target.value);
@@ -59,7 +81,7 @@ const Feed = () => {
     );
   };
 
-  const handleTagClick = (tagName) => {
+  const handleTagClick = (tagName: string) => {
     setSearchText(tagName);
 
     const searchResult = filterPrompts(tagName);

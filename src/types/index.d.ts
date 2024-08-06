@@ -20,7 +20,6 @@ export type SiteConfig = {
   creator: { name: string; url: string };
   keywords: string[];
   links: {
-    twitter: string;
     github: string;
   };
 };

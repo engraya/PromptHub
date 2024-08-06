@@ -4,15 +4,14 @@ export const siteConfig: SiteConfig = {
   name: "AI Prompts",
   description:
     "© 2024 aiPrompts. All Rights Reserved. | Privacy Policy",
-  url: "https://nextemplate.vercel.app",
-  ogImage: "https://nextemplate.vercel.app/og.png",
+  url: "https://github.com/engraya/aiPrompts",
+  ogImage: "",
   creator: {
     name: "RDS",
-    url: "https://twitter.com/rds_agi",
+    url: "",
   },
   keywords: ["nextjs", "next", "typescript", "tailwindcss"],
   links: {
-    twitter: "https://twitter.com/rds_agi",
     github: "https://github.com/engraya/aiPrompts",
   },
 };

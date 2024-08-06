@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -6,6 +5,8 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import Provider from "@components/Provider";
+import { getSession } from "next-auth/react"; // Import getSession
+import { Metadata } from "next";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -83,11 +84,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Fetch the session here
+  const session = await getSession();
+
   return (
     <html>
       <body
@@ -98,19 +102,18 @@ export default function RootLayout({
         )}
         suppressHydrationWarning={true}
       >
-        <Provider>
-        <div className="main"></div>
-        <div className="gradient"></div>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <Provider session={session}> {/* Pass session prop */}
+          <div className="main"></div>
+          <div className="gradient"></div>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </Provider>
-
       </body>
     </html>
   );

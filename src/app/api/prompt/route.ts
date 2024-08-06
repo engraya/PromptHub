@@ -1,14 +1,15 @@
 import Prompt from "@models/prompt";
 import { connectToDB } from "@utils/database";
+import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async (request) => {
+export const GET = async (request: NextRequest): Promise<NextResponse> => {
     try {
-        await connectToDB()
+        await connectToDB();
 
-        const prompts = await Prompt.find({}).populate('creator')
+        const prompts = await Prompt.find({}).populate('creator');
 
-        return new Response(JSON.stringify(prompts), { status: 200 })
+        return new NextResponse(JSON.stringify(prompts), { status: 200 });
     } catch (error) {
-        return new Response("Failed to fetch all prompts", { status: 500 })
+        return new NextResponse("Failed to fetch all prompts", { status: 500 });
     }
-} 
+};
