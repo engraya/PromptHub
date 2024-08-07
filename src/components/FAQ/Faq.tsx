@@ -34,7 +34,7 @@ function Faq() {
             </p>
           </div>
           <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-            <svg height="25px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295.238 295.238" style={{enableBackground: 'new 0 0 295.238 295.238'}} xmlSpace="preserve">
+            <svg height="25px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295.238 295.238" xmlSpace="preserve">
               <g>
                 <g>
                   <g>
@@ -88,7 +88,7 @@ function Faq() {
             <p className="text-gray-700 text-sm">aiPrompts is a web app designed to help you create, discover, and share prompts that can spark creativity and innovation.</p>
           </div>
           <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-            <svg height="25px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295.238 295.238" style={{enableBackground: 'new 0 0 295.238 295.238'}} xmlSpace="preserve">
+            <svg height="25px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295.238 295.238" xmlSpace="preserve">
               <g>
                 <g>
                   <g>
@@ -143,7 +143,7 @@ function Faq() {
             </p>
           </div>
           <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-            <svg height="25px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295.238 295.238" style={{enableBackground: 'new 0 0 295.238 295.238'}} xmlSpace="preserve">
+            <svg height="25px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295.238 295.238" xmlSpace="preserve">
               <g>
                 <g>
                   <g>
