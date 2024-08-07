@@ -19,11 +19,11 @@ const MobileFooter = () => {
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-1 justify-center sm:justify-start">
             <a
               className="ml-3 text-gray-400"
-              href={siteConfig.links.twitter}
+              href={siteConfig.links.github}
               target="_blank"
               id="contact"
             >
-              <span className="text-blue-500 inline-block">rds_agi</span>
+              <span className="text-blue-500 inline-block">Github</span>
             </a>
           </span>
         </div>
