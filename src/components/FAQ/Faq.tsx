@@ -139,7 +139,7 @@ function Faq() {
         </div>
         <div className="flex flex-row items-start">
           <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
-            <p className="text-gray-700 text-sm">Simply sign up, navigate to the 'Create' section, and start building your prompt using our intuitive editor.
+            <p className="text-gray-700 text-sm">Simply sign up, navigate to the Create section, and start building your prompt using our intuitive editor.
             </p>
           </div>
           <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">

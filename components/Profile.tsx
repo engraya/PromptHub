@@ -36,9 +36,11 @@ const Profile: React.FC<ProfileProps> = ({ data, handleEdit, handleDelete }) => 
     <section className="w-full overflow-hidden">
       <div className="w-full mx-auto">
         {/* User Cover IMAGE */}
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1560697529-7236591c0066?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y292ZXJ8ZW58MHwwfHx8MTcxMDQ4MTEwNnww&ixlib=rb-4.0.3&q=80&w=1080"
           alt="User Cover"
+          height={100}
+          width={100}
           className="w-full xl:h-[14rem] lg:h-[18rem] md:h-[12rem] sm:h-[10rem] xs:h-[6.5rem]"
         />
         {/* User Profile Image */}

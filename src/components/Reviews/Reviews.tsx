@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image'
 function Reviews() {
   return (
 <div className="text-gray-600 dark:text-gray-300 pt-8" id="reviews">
@@ -12,7 +12,7 @@ function Reviews() {
     <div className="md:columns-2 lg:columns-3 gap-8 space-y-8">
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
         <div className="flex gap-4">
-          <img className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/12.jpg" alt="user avatar" width={400} height={400} loading="lazy" />
+          <Image className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/12.jpg" alt="user avatar" width={400} height={400} loading="lazy" />
           <div>
             <h6 className="text-lg font-medium text-gray-700 dark:text-white">John Doe</h6>
             <p className="text-sm text-gray-500 dark:text-gray-300">Content Writer</p>
@@ -23,7 +23,7 @@ function Reviews() {
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
         <div className="flex gap-4">
-          <img className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/women/14.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
+        <Image className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/women/14.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
           <div>
             <h6 className="text-lg font-medium text-gray-700 dark:text-white">Jane Smith</h6>
             <p className="text-sm text-gray-500 dark:text-gray-300">Marketing Specialist</p>
@@ -34,7 +34,7 @@ function Reviews() {
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
         <div className="flex gap-4">
-          <img className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/18.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
+        <Image className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/18.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
           <div>
             <h6 className="text-lg font-medium text-gray-700 dark:text-white">Michael Brown</h6>
             <p className="text-sm text-gray-500 dark:text-gray-300">Software Developer</p>
@@ -45,7 +45,7 @@ function Reviews() {
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
         <div className="flex gap-4">
-          <img className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
+        <Image className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
           <div>
             <h6 className="text-lg font-medium text-gray-700 dark:text-white">Emily Johnson</h6>
             <p className="text-sm text-gray-500 dark:text-gray-300">Graphic Designer</p>
@@ -56,7 +56,7 @@ function Reviews() {
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
         <div className="flex gap-4">
-          <img className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/62.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
+        <Image className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/62.jpg" alt="user avatar" width={200} height={200} loading="lazy" />
           <div>
             <h6 className="text-lg font-medium text-gray-700 dark:text-white">David Wilson</h6>
             <p className="text-sm text-gray-500 dark:text-gray-300">Teacher</p>
@@ -67,7 +67,7 @@ function Reviews() {
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
         <div className="flex gap-4">
-          <img className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/women/19.jpg" alt="user avatar" width={400} height={400} loading="lazy" />
+        <Image className="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/women/19.jpg" alt="user avatar" width={400} height={400} loading="lazy" />
           <div>
             <h6 className="text-lg font-medium text-gray-700 dark:text-white">Sarah Davis</h6>
             <p className="text-sm text-gray-500 dark:text-gray-300">Entrepreneur</p>
