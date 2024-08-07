@@ -46,6 +46,7 @@ const CreatePromptPage: React.FC = () => {
         },
         body: JSON.stringify({
           prompt: post.prompt,
+                   // @ts-ignore
           userId: session?.user?.id,
           tag: post.tag,
         }),

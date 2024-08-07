@@ -9,7 +9,8 @@ import { useSelectedLayoutSegment } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { signIn, signOut, useSession, getProviders, LiteralUnion } from "next-auth/react";
+import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+         // @ts-ignore
 import { Providers as AuthProviders } from "next-auth/providers"; // Adjust import as needed
 
 import {

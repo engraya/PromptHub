@@ -4,8 +4,8 @@ import React from 'react';
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import PromptCard from './PromptCard';
-import Reviews from '@/components/Reviews/Reviews';
-import UserPromptList from './UserPromptList';
+
+
 interface Creator {
   _id: string;
   username: string;

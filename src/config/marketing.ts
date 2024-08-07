@@ -11,12 +11,13 @@ export const marketingConfig: MarketingConfig = {
       href: "/about",
     },
     {
-      title: "Profile",
-      href: "/profile",
-    },
-    {
       title: "Prompts",
       href: "/prompts",
     },
+    {
+      title: "Profile",
+      href: "/profile",
+    },
+ 
   ],
 };
