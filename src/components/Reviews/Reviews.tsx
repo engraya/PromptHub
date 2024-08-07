@@ -18,7 +18,7 @@ function Reviews() {
             <p className="text-sm text-gray-500 dark:text-gray-300">Content Writer</p>
           </div>
         </div>
-        <p className="mt-8">"aiPrompts has completely transformed my writing process. The AI-generated prompts are incredibly creative and have sparked so many new ideas for my projects. I can not recommend it enough!"
+        <p className="mt-8">aiPrompts has completely transformed my writing process. The AI-generated prompts are incredibly creative and have sparked so many new ideas for my projects. I can not recommend it enough!.
         </p>
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
