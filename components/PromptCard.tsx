@@ -74,6 +74,7 @@ const PromptCard: React.FC<PromptCardProps> = ({ post, handleEdit, handleDelete,
       <div onClick={() => handleTagClick && handleTagClick(post.tag)} className='text-blue-500 hover:text-blue-600 mt-4'>
         #{post.tag}
       </div>
+         {/* @ts-ignore */}
       {session?.user?.id === post.creator._id && pathName === "/profile" && (
         <div className="flex space-x-4 justify-center items-center mt-3 flex-center gap-4 border-t border-gray-100 pt-2">
           {/* <button 
