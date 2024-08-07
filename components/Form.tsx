@@ -78,7 +78,6 @@ function Form({ type, post, setPost, submitting, handleSubmit }: FormProps) {
             type='submit'
             disabled={submitting}
             className="flex rounded border-0 bg-gradient-to-r from-green-400 to-blue-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none">
-            {/* {submitting ? `${type}ing...` : type} */}
             {submitting ?  <Spinner color="warning" aria-label="Warning spinner example" /> : "Create"}
           </button>
           <Link href="/">
