@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { Spinner } from 'flowbite-react';
 
 
 interface Creator {
@@ -34,10 +35,7 @@ interface FormProps {
 function Form({ type, post, setPost, submitting, handleSubmit }: FormProps) {
   return (
     <section className='w-full max-w-full flex-start flex-col'>
-      <h1 className='head_text text-left'>
-        <span className='blue_gradient'>{type} Post</span>
-      </h1>
-      <p className='desc text-left max-w-md'>
+      <p className='desc text-center max-w-md'>
         {type} and share amazing prompts with the world, and let your
         imagination run wild with any AI-powered platform
       </p>
@@ -75,17 +73,18 @@ function Form({ type, post, setPost, submitting, handleSubmit }: FormProps) {
             </label>
           </div>
         </div>
-        <div className="w-full p-2">
+        <div className="flex justify-center items-center gap-x-6 p-2">
           <button
             type='submit'
             disabled={submitting}
-            className="mx-auto flex rounded border-0 bg-indigo-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none">
-            {submitting ? `${type}ing...` : type}
+            className="flex rounded border-0 bg-gradient-to-r from-green-400 to-blue-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none">
+            {/* {submitting ? `${type}ing...` : type} */}
+            {submitting ?  <Spinner color="warning" aria-label="Warning spinner example" /> : "Create"}
           </button>
           <Link href="/">
-            <a className="mx-auto flex rounded border-0 bg-pink-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none">
+            <div className="flex rounded border-0 bg-red-500 hover:bg-red-700 py-2 px-8 text-lg text-white focus:outline-none">
               Cancel
-            </a>
+            </div>
           </Link>
         </div>
       </form>

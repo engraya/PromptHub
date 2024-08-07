@@ -1,6 +1,7 @@
 import MobileFooter from "./mobile-footer";
 import { Icons } from "@/components/icons";
 import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export default async function SiteFooter() {
   return (
@@ -26,14 +27,14 @@ export default async function SiteFooter() {
               typedKey.charAt(0).toUpperCase() + typedKey.slice(1);
 
             return (
-              <a
+              <Link
                 key={typedKey}
                 href={siteConfig.links[typedKey]}
                 target="_blank"
                 className="text-sm"
               >
                 {capitalizedKey}
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -48,13 +49,13 @@ export default async function SiteFooter() {
               {siteConfig.name.toLocaleLowerCase()}
             </h1>
           </a>
-          <a
+          <Link
             href={siteConfig.links.github}
             target="_blank"
             className="max-w-sm text-sm"
           >
             Feel free contribute at {siteConfig.links.github}
-          </a>
+          </Link>
         </div>
       </section>
       <div className="block lg:hidden">

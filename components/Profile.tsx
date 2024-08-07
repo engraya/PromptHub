@@ -4,7 +4,8 @@ import React from 'react';
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import PromptCard from './PromptCard';
-
+import Reviews from '@/components/Reviews/Reviews';
+import UserPromptList from './UserPromptList';
 interface Creator {
   _id: string;
   username: string;
@@ -32,7 +33,7 @@ const Profile: React.FC<ProfileProps> = ({ data, handleEdit, handleDelete }) => 
   const { data: session } = useSession();
 
   return (
-    <section className="w-full overflow-hidden dark:bg-gray-900">
+    <section className="w-full overflow-hidden">
       <div className="w-full mx-auto">
         {/* User Cover IMAGE */}
         <img
@@ -58,18 +59,14 @@ const Profile: React.FC<ProfileProps> = ({ data, handleEdit, handleDelete }) => 
           <p className="text-center text-gray-800 dark:text-white text-xl font-serif">
             {session?.user?.email}
           </p>
-          <div className="py-4 text-center md:py-4">
-            <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-slate-200 sm:text-3xl md:text-4xl">
-              <span className="block xl:inline">
-                <span className="bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent">
-                  My Prompts
-                </span>
-              </span>
-            </h1>
-          </div>
-
-          {/* Cards */}
-          <div className="w-full flex gap-4 justify-center items-center mt-10">
+        <div className="text-gray-600 dark:text-gray-300 pt-8" id="reviews">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+            <div className="mb-10 space-y-4 px-6 md:px-0">
+              <h2 className="text-center text-2xl bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent font-bold text-gray-800 md:text-4xl">
+                My Prompts
+              </h2>
+            </div>
+            <div className="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
             {data.map((post) => (
               <PromptCard
                 key={post._id}
@@ -78,7 +75,9 @@ const Profile: React.FC<ProfileProps> = ({ data, handleEdit, handleDelete }) => 
                 handleDelete={() => handleDelete && handleDelete(post)}
               />
             ))}
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

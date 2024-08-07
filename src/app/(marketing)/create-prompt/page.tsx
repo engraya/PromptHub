@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Form from "@components/Form";
+import { toast } from "react-toastify";
 
 // Define types for the prompt and props
 interface Creator {
@@ -51,7 +52,8 @@ const CreatePromptPage: React.FC = () => {
       });
 
       if (response.ok) {
-        router.push("/");
+        router.push("/prompts");
+        toast.success("Prompt successfully created!!");
       }
     } catch (error) {
       console.log(error);

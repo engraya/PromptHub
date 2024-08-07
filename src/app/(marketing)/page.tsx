@@ -1,5 +1,3 @@
-import { siteConfig } from "@/config/site";
-import TemplateCollection from "./_components/collection";
 import Hero from "@/components/Hero/Hero";
 import Faq from "@/components/FAQ/Faq";
 import ButtomBanner from "@/components/ButtomBanner/ButtomBanner";

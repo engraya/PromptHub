@@ -25,7 +25,7 @@ interface PromptCardListProps {
 
 const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
   return (
-    <div className='mt-16 prompt_layout'>
+    <div className="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
       {data.map((post) => (
         <PromptCard
           key={post._id}
@@ -89,7 +89,7 @@ const Feed = () => {
   };
 
   return (
-    <section className='mt-10 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2'>
+    <section className='mt-10 w-full flex justify-center items-center flex-col gap-2'>
       <form className='relative w-full flex-center'>
         <input
           type='text'
@@ -97,16 +97,19 @@ const Feed = () => {
           value={searchText}
           onChange={handleSearchChange}
           required
-          className='block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0'
+          className='block w-full text-gray-800 rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0'
         />
       </form>
 
       {/* All Prompts */}
       {searchText ? (
-        <PromptCardList
+        <div className="">
+          <PromptCardList
           data={searchedResults}
           handleTagClick={handleTagClick}
         />
+        </div>
+
       ) : (
         <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
       )}
