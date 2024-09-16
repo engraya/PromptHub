@@ -18,6 +18,8 @@ interface PromptCardListProps {
   handleTagClick: (tagName: string) => void;
 }
 
+export const dynamic = 'force-dynamic'
+
 const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
   return (
     <>
