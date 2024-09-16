@@ -38,7 +38,7 @@ function Form({ type, post, setPost, submitting, handleSubmit }: FormProps) {
               className="peer h-32 w-full resize-none rounded border border-gray-700 bg-gray-200 bg-opacity-40 py-1 px-3 text-base leading-6 text-gray-800 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               placeholder='Write your post here'
             />
-            <label htmlFor="prompt" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">
+            <label htmlFor="prompt" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-400 ">
               Prompt
             </label>
           </div>
@@ -55,7 +55,7 @@ function Form({ type, post, setPost, submitting, handleSubmit }: FormProps) {
               className="peer w-full rounded border border-gray-700 bg-gray-200 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-800 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               placeholder='#Tag'
             />
-            <label htmlFor="tag" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">
+            <label htmlFor="tag" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-400 ">
               #Tag
             </label>
           </div>
@@ -72,7 +72,7 @@ function Form({ type, post, setPost, submitting, handleSubmit }: FormProps) {
               className="peer w-full rounded border border-gray-700 bg-gray-200 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-800 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500  focus:ring-2 focus:ring-indigo-900"
               placeholder='#Creator'
             />
-            <label htmlFor="username" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">
+            <label htmlFor="username" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-400 ">
               #Creator
             </label>
           </div>
@@ -89,7 +89,7 @@ function Form({ type, post, setPost, submitting, handleSubmit }: FormProps) {
               className="peer w-full rounded border border-gray-700 bg-gray-200 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-800 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500  focus:ring-2 focus:ring-indigo-900"
               placeholder='#Email'
             />
-            <label htmlFor="email" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">
+            <label htmlFor="email" className="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-400 ">
               #Email
             </label>
           </div>

@@ -10,7 +10,7 @@ import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { promptCreator } from "@assets";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import { revalidatePath } from 'next/cache';
+import { formatDate } from '@utils/date';
   
   interface Post {
     _id: string;
@@ -18,6 +18,7 @@ import { revalidatePath } from 'next/cache';
     tag: string;
     username : string
     email : string
+    createdAt : string
   }
   
   interface PromptCardProps {
@@ -32,6 +33,12 @@ function NewPromptCard({ post, handleTagClick } : PromptCardProps) {
     const [copied, setCopied] = useState<string>("");
     const router = useRouter();
 
+        
+    const handleRevalidatePromptPage = () => {
+      router.push(`/prompts`); // Pass the prompt ID in the query params
+    };
+    
+
 
     const deletePrompt = async (promptId: string) => {
     
@@ -41,8 +48,9 @@ function NewPromptCard({ post, handleTagClick } : PromptCardProps) {
         });
     
         if (response.ok) {
-          // router.push("/prompts"); // Redirect or refresh the list of prompts
-          revalidatePath("/prompts")
+          handleRevalidatePromptPage()
+          // router.push("/"); 
+          
           toast.success("Prompt successfully deleted!");
         } else {
           const errorData = await response.json();
@@ -68,11 +76,12 @@ function NewPromptCard({ post, handleTagClick } : PromptCardProps) {
     const handleUpdatePrompt = () => {
       router.push(`/update-prompt?id=${post._id}`); // Pass the prompt ID in the query params
     };
-    
+
+
 
 
   return (
-<div className="font-sans rounded-md border px-4 py-4 h-full">
+<div className="font-sans rounded-md border px-6 py-4 h-full">
   <div className="flex items-center">
     <Image 
         src={promptCreator}
@@ -80,11 +89,11 @@ function NewPromptCard({ post, handleTagClick } : PromptCardProps) {
         className="h-12 w-12 rounded-full"
         loading="lazy"
     />
-    <div className="flex flex-col ml-4">
+    <div className="flex flex-col">
         <div className="font-bold text-black dark:text-emerald-50">
             {post.username}
         </div>
-        <span className="text-gray-800 dark:text-emerald-50">{post.email}</span>
+        <span className="text-gray-800 text-xs dark:text-emerald-50">{post.email}</span>
         </div>
         <div className="ml-auto cursor-pointer"  onClick={handleCopy}>
         { copied === post.prompt ? <IoCheckmarkDoneSharp className='text-blue-500 hover:text-blue-600'/> : <IoIosCopy className='text-blue-500 hover:text-blue-600'/> }
@@ -96,7 +105,7 @@ function NewPromptCard({ post, handleTagClick } : PromptCardProps) {
       <div onClick={() => deletePrompt(post._id)} className="flex items-center mr-4 cursor-pointer"><RiDeleteBin6Fill size="1.5rem" color='red'/></div>
       <div onClick={() => handleUpdatePrompt()} className="flex items-center mr-4 cursor-pointer"><FcEditImage size="1.5rem"/></div>
       </div>
-      <div className="text-grey text-xs flex justify-center items-center mr-2 dark:text-emerald-50">11:56 AM - Aug 3, 2009</div>
+      <div className="text-grey text-xs flex justify-center items-center mr-2 dark:text-emerald-50">{formatDate(post.createdAt)}</div>
       <div onClick={() => handleTagClick && handleTagClick(post.tag)} className="flex justify-start gap-1 px-2 py-1 text-xs dark:text-gray-900 rounded cursor-pointer dark:bg-emerald-100 bg-slate-100 text-blue-600">
         <span>
         #{post.tag}

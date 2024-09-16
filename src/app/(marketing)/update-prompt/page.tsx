@@ -70,7 +70,7 @@ function UpdatePromptPage() {
   <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-slate-200 sm:text-3xl md:text-4xl">
     <span className="block xl:inline">
       <span className="bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent">
-        Update Prompts
+        Update Prompt
       </span>
     </span>
   </h1>

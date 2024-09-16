@@ -4,7 +4,7 @@ const MobileFooter = () => {
   return (
     <footer className="backdrop-blur-sm">
       <div className="bg-opacity-75">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row s">
+        <div className="container mx-auto py-2 px-5 flex flex-wrap flex-col sm:flex-row s">
           <p className="text-sm text-center sm:text-left flex flex-row justify-center">
             © {`${new Date().getFullYear()} `} | 
             <a

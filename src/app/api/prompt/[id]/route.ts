@@ -22,7 +22,7 @@ export const GET = async (request: NextRequest, { params }: { params: Params }):
 
 export const PATCH = async (request: NextRequest, { params }: { params: Params }): Promise<NextResponse> => {
     try {
-        const { prompt, tag } = await request.json();
+        const { prompt, tag, username, email } = await request.json();
 
         await connectToDB();
 
@@ -36,6 +36,8 @@ export const PATCH = async (request: NextRequest, { params }: { params: Params }
         // Update the prompt with new data
         existingPrompt.prompt = prompt;
         existingPrompt.tag = tag;
+        existingPrompt.username = username;
+        existingPrompt.email = email;
 
         await existingPrompt.save();
 

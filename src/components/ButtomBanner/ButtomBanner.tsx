@@ -8,7 +8,7 @@ function ButtomBanner() {
       community now</h2>
     <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Create your account to gain full access to PromptHub. Explore the diverse range of prompts created by our community and get a feel for the inspiration that awaits you</p>
     <div className="mt-12 flex items-center justify-center gap-x-6">
-      <Link href="https://github.com/engraya/aiPrompts" target="_blank">
+      <Link href="https://github.com/engraya/PromptHub" target="_blank">
       <button type="button" className="text-md relative inline-flex items-center gap-x-2 rounded-lg bg-teal-600 px-6 py-4 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">
         <span className="absolute -top-5 left-0 w-full text-center text-xs italic text-teal-600">No Obligations</span>Join Now
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="-mr-0.5 h-5 w-5">

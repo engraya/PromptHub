@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react";
 import NewPromptCard from "./NewPromptCard";
 import Link from "next/link";
-
+import NoPromptData from "./NoPromptData";
 interface Post {
   _id: string;
   prompt: string;
   tag: string;
   username : string
   email : string
+  createdAt : string
 }
 
 interface PromptCardListProps {
@@ -19,15 +20,23 @@ interface PromptCardListProps {
 
 const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
   return (
-    <div className="mt-10 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
-      {data.map((post) => (
-        <NewPromptCard
-        key={post._id}
-        post={post}
-        handleTagClick={handleTagClick}
-        />
-      ))}
-    </div>
+    <>
+    {data ? (
+        <div className="mt-10 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+        {data.map((post) => (
+          <NewPromptCard
+          key={post._id}
+          post={post}
+          handleTagClick={handleTagClick}
+          />
+        ))}
+      </div>
+    ) : (
+  <NoPromptData/>
+    )}
+   
+    </>
+
   );
 };
 

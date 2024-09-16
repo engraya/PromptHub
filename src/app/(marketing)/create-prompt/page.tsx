@@ -65,13 +65,13 @@ const CreatePromptPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-5 py-24">
-      <div className="mb-12 flex w-full flex-col text-center">
+    <div className="container mx-auto px-5 py-16">
+      <div className=" flex w-full flex-col text-center">
         <div className="text-center">
           <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-slate-200 sm:text-3xl md:text-4xl">
             <span className="block xl:inline">
               <span className="bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent">
-                Create Prompts
+                Create Prompt
               </span>
             </span>
           </h1>
