@@ -18,7 +18,7 @@ function Reviews() {
             <p className="text-sm text-gray-500 dark:text-gray-300">Content Writer</p>
           </div>
         </div>
-        <p className="mt-8">aiPrompts has completely transformed my writing process. The AI-generated prompts are incredibly creative and have sparked so many new ideas for my projects. I can not recommend it enough!.
+        <p className="mt-8">PromptHub has completely transformed my writing process. The generated prompts are incredibly creative and have sparked so many new ideas for my projects. I can not recommend it enough!.
         </p>
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
@@ -29,7 +29,7 @@ function Reviews() {
             <p className="text-sm text-gray-500 dark:text-gray-300">Marketing Specialist</p>
           </div>
         </div>
-        <p className="mt-8">As a marketer, I am always looking for fresh ideas. aiPrompts has been a game-changer for my brainstorming sessions. The community aspect is also fantastic for getting feedback and collaborating on new concepts.
+        <p className="mt-8">As a marketer, I am always looking for fresh ideas. PromptHub has been a game-changer for my brainstorming sessions. The community aspect is also fantastic for getting feedback and collaborating on new concepts.
         </p>
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
@@ -40,7 +40,7 @@ function Reviews() {
             <p className="text-sm text-gray-500 dark:text-gray-300">Software Developer</p>
           </div>
         </div>
-        <p className="mt-8">I love using aiPrompts to generate coding challenges and project ideas. It is a great way to keep my skills sharp and stay inspired. The customization options are really impressive too!
+        <p className="mt-8">I love using PromptHub to generate coding challenges and project ideas. It is a great way to keep my skills sharp and stay inspired. The customization options are really impressive too!
         </p>
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
@@ -51,7 +51,7 @@ function Reviews() {
             <p className="text-sm text-gray-500 dark:text-gray-300">Graphic Designer</p>
           </div>
         </div>
-        <p className="mt-8">aiPrompts is an amazing tool for sparking creativity. Whether I am working on a new design or looking for inspiration, the prompts are always helpful. Plus, the community is very supportive and engaging.
+        <p className="mt-8">PromptHub is an amazing tool for sparking creativity. Whether I am working on a new design or looking for inspiration, the prompts are always helpful. Plus, the community is very supportive and engaging.
         </p>
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
@@ -62,7 +62,7 @@ function Reviews() {
             <p className="text-sm text-gray-500 dark:text-gray-300">Teacher</p>
           </div>
         </div>
-        <p className="mt-8">I have integrated aiPrompts into my classroom activities, and my students love it! The prompts are diverse and engaging, making learning more fun and interactive. It is a wonderful resource for educators.
+        <p className="mt-8">I have integrated PromptHub into my classroom activities, and my students love it! The prompts are diverse and engaging, making learning more fun and interactive. It is a wonderful resource for educators.
         </p>
       </div>
       <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
@@ -73,7 +73,7 @@ function Reviews() {
             <p className="text-sm text-gray-500 dark:text-gray-300">Entrepreneur</p>
           </div>
         </div>
-        <p className="mt-8">aiPrompts has been invaluable for my business ideation process. The AI-generated prompts help me think outside the box and come up with innovative solutions. It is a must-have tool for any entrepreneur.
+        <p className="mt-8">PromptHub has been invaluable for my business ideation process. The generated prompts help me think outside the box and come up with innovative solutions. It is a must-have tool for any entrepreneur.
         </p>
       </div>
     </div>

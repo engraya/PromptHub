@@ -11,7 +11,7 @@ export const GET = async (request: NextRequest, { params }: { params: Params }):
     try {
         await connectToDB();
 
-        const prompt = await Prompt.findById(params.id).populate("creator");
+        const prompt = await Prompt.findById(params.id);
         if (!prompt) return new NextResponse("Prompt Not Found", { status: 404 });
 
         return new NextResponse(JSON.stringify(prompt), { status: 200 });

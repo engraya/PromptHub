@@ -14,10 +14,5 @@ export const marketingConfig: MarketingConfig = {
       title: "Prompts",
       href: "/prompts",
     },
-    {
-      title: "Profile",
-      href: "/profile",
-    },
- 
   ],
 };

@@ -1,9 +1,9 @@
 import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "AI Prompts",
+  name: "PrompHub",
   description:
-    "© 2024 aiPrompts. All Rights Reserved. | Privacy Policy",
+    "© 2024 PromptHub. All Rights Reserved. | Privacy Policy",
   url: "https://github.com/engraya/aiPrompts",
   ogImage: "",
   creator: {

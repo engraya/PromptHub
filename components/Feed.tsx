@@ -1,21 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PromptCard from "./PromptCard";
-
-// Define types for the prompt and props
-interface Creator {
-  _id: string;
-  username: string;
-  email: string;
-  image: string;
-}
+import NewPromptCard from "./NewPromptCard";
+import Link from "next/link";
 
 interface Post {
   _id: string;
-  creator: Creator;
   prompt: string;
   tag: string;
+  username : string
+  email : string
 }
 
 interface PromptCardListProps {
@@ -25,12 +19,12 @@ interface PromptCardListProps {
 
 const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
   return (
-    <div className="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+    <div className="mt-10 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
       {data.map((post) => (
-        <PromptCard
-          key={post._id}
-          post={post}
-          handleTagClick={handleTagClick}
+        <NewPromptCard
+        key={post._id}
+        post={post}
+        handleTagClick={handleTagClick}
         />
       ))}
     </div>
@@ -61,7 +55,8 @@ const Feed = () => {
     const regex = new RegExp(searchText, "i");
     return allPosts.filter(
       (item) =>
-        regex.test(item.creator.username) ||
+        regex.test(item.username) ||
+        regex.test(item.email) ||
         regex.test(item.tag) ||
         regex.test(item.prompt)
     );
@@ -89,16 +84,23 @@ const Feed = () => {
   };
 
   return (
-    <section className='mt-10 w-full flex justify-center items-center flex-col gap-2'>
-      <form className='relative w-full flex-center'>
+    <section className='w-full flex justify-center items-center flex-col gap-2'>
+
+      <form className='relative flex-center w-full space-x-3 flex justify-center items-center'>
         <input
           type='text'
-          placeholder='Search for a tag or a username'
+          placeholder='Search tag or username'
           value={searchText}
           onChange={handleSearchChange}
           required
-          className='block w-full text-gray-800 rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0'
+          className='w-full flex justify-center items-center text-gray-800 rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0'
         />
+        <Link href="/create-prompt">
+          <button type="button" className="text-white flex justify-center items-center bg-gradient-to-r from-blue-400 to-indigo-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
+            Create
+            <span>+</span>
+          </button>
+        </Link>
       </form>
 
       {/* All Prompts */}
@@ -109,7 +111,6 @@ const Feed = () => {
           handleTagClick={handleTagClick}
         />
         </div>
-
       ) : (
         <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
       )}

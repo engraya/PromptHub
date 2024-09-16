@@ -6,7 +6,7 @@ export const GET = async (request: NextRequest): Promise<NextResponse> => {
     try {
         await connectToDB();
 
-        const prompts = await Prompt.find({}).populate('creator');
+        const prompts = await Prompt.find({});
 
         return new NextResponse(JSON.stringify(prompts), { status: 200 });
     } catch (error) {

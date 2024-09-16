@@ -7,7 +7,7 @@ function HowItWorks() {
     <div className="max-w-2xl mx-auto text-center">
       <h2 className="text-3xl text-gray-800 dark:text-gray-100 font-extrabold mx-auto md:text-5xl lg:text-4xl">How does it work?</h2>
       <p className="max-w-2xl mx-auto mt-4 text-base text-gray-400 leading-relaxed md:text-2xl">
-        Our AI solution will help you from start to finish
+        Our Exceptional solution will help you from start to finish
       </p>
     </div>
     <div className="relative mt-12 lg:mt-20">
@@ -20,7 +20,7 @@ function HowItWorks() {
           </div>
           <h3 className="mt-6 text-xl text-gray-800 dark:text-gray-100 font-semibold leading-tight md:mt-10">Join the Community</h3>
           <p className="mt-4 text-base text-gray-400 md:text-lg">
-          Create your account to gain full access to aiPrompts. Explore the diverse range of prompts created by our community and get a feel for the inspiration that awaits you
+          Create your account to gain full access to PromptHub. Explore the diverse range of prompts created by our community and get a feel for the inspiration that awaits you
           </p>
         </div>
         <div>
@@ -29,7 +29,7 @@ function HowItWorks() {
           </div>
           <h3 className="mt-6 text-xl text-gray-800 dark:text-gray-100 font-semibold leading-tight md:mt-10">Create Unique Prompts</h3>
           <p className="mt-4 text-base text-gray-400 md:text-lg">
-          Use our AI-powered prompt generator to create unique prompts tailored to your needs. Enter a few details about your project, and let our AI do the rest. Customize the generated prompt to make it perfect for your use case.
+          Use our  prompt generator to create unique prompts tailored to your needs. Enter a few details about your project, and let our AI do the rest. Customize the generated prompt to make it perfect for your use case.
           </p>
         </div>
         <div>
@@ -38,7 +38,7 @@ function HowItWorks() {
           </div>
           <h3 className="mt-6 text-xl text-gray-800 dark:text-gray-100 font-semibold leading-tight md:mt-10">Connect and Inspire</h3>
           <p className="mt-4 text-base text-gray-400 md:text-lg">
-          Share your customized prompts with the aiPrompts community. Collaborate with other creators in real-time, gain feedback, and discover new ideas. Engage with a network of innovative thinkers and let your creativity flourish.
+          Share your customized prompts with the PromptHub community. Collaborate with other creators in real-time, gain feedback, and discover new ideas. Engage with a network of innovative thinkers and let your creativity flourish.
           </p>
         </div>
       </div>

@@ -4,8 +4,6 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
-import Provider from "@components/Provider";
-import { getSession } from "next-auth/react"; // Import getSession
 import { Metadata } from "next";
 
 const fontSans = Inter({
@@ -89,8 +87,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Fetch the session here
-  const session = await getSession();
 
   return (
     <html>
@@ -102,7 +98,6 @@ export default async function RootLayout({
         )}
         suppressHydrationWarning={true}
       >
-        <Provider session={session}> {/* Pass session prop */}
           <div className="main"></div>
           <div className="gradient"></div>
           <ThemeProvider
@@ -113,7 +108,6 @@ export default async function RootLayout({
           >
             {children}
           </ThemeProvider>
-        </Provider>
       </body>
     </html>
   );

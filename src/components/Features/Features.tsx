@@ -24,7 +24,7 @@ function Features() {
             </div>
             <div className="ml-4">
               <h4 className="text-lg font-medium leadi ">Open Source</h4>
-              <p className="mt-2 ">Contribute to the growth and improvement of aiPrompts on GitHub.</p>
+              <p className="mt-2 ">Contribute to the growth and improvement of PromptHub on GitHub.</p>
             </div>
           </div>
           <div className="flex">

@@ -30,7 +30,7 @@ function Faq() {
         </div>
         <div className="flex flex-row items-start">
           <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
-            <p className="text-gray-700 text-sm">Yes! aiPrompts makes it easy to share your prompts with the community or keep them private for personal use
+            <p className="text-gray-700 text-sm">Yes! PromptHub makes it easy to share your prompts with the community or keep them private for personal use
             </p>
           </div>
           <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
@@ -80,12 +80,12 @@ function Faq() {
             </svg>
           </div>
           <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
-            <h4 className="text-md leading-6 font-medium text-gray-900">What is aiPrompts?</h4>
+            <h4 className="text-md leading-6 font-medium text-gray-900">What is PromptHub?</h4>
           </div>
         </div>
         <div className="flex flex-row items-start">
           <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
-            <p className="text-gray-700 text-sm">aiPrompts is a web app designed to help you create, discover, and share prompts that can spark creativity and innovation.</p>
+            <p className="text-gray-700 text-sm">PromptHub is an online hub designed to help you create, discover, and share prompts that can spark creativity and innovation.</p>
           </div>
           <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
             <svg height="25px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295.238 295.238" xmlSpace="preserve">

@@ -25,14 +25,15 @@ interface Post {
 interface FormPost {
   prompt: string;
   tag: string;
+  username : string
+  email : string
 }
+
 
 const CreatePromptPage: React.FC = () => {
   const router = useRouter();
-  const { data: session } = useSession();
-
   const [submitting, setIsSubmitting] = useState(false);
-  const [post, setPost] = useState<FormPost>({ prompt: "", tag: "" });
+  const [post, setPost] = useState<FormPost>({ prompt: "", tag: "", username : "", email : "" });
 
   const createPrompt = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,9 +47,9 @@ const CreatePromptPage: React.FC = () => {
         },
         body: JSON.stringify({
           prompt: post.prompt,
-                   // @ts-ignore
-          userId: session?.user?.id,
           tag: post.tag,
+          username: post.username,
+          email: post.email,
         }),
       });
 
