@@ -2,6 +2,8 @@ import Prompt from "@models/prompt";
 import { connectToDB } from "@utils/database";
 import { NextRequest, NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic'
+
 // Type for the parameters
 interface Params {
     id: string;
